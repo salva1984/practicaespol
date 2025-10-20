@@ -1,0 +1,118 @@
+/* Importar la fuente Cinzel para títulos y Lato para cuerpo */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* Variables CSS para la paleta de colores */
+:root {
+    --color-fondo-principal: #0d0d0d;
+    /* Negro muy oscuro */
+    --color-fondo-alternativo: #2c3e50;
+    /* Azul medianoche/Gris oscuro */
+    --color-texto-principal: #f0f0f0;
+    /* Blanco roto */
+    --color-acento: #b38e00;
+    /* Oro/Bronce oscuro */
+}
+
+/* Estilos Globales */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.5s ease;
+    /* Transición suave para el cambio de JS */
+}
+
+/* Tipografía */
+h1,
+h2 {
+    font-family: 'Cinzel', serif;
+    color: var(--color-acento);
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5em;
+}
+
+h1 {
+    font-size: 2.5em;
+    border-bottom: 2px solid var(--color-acento);
+    padding-bottom: 10px;
+}
+
+/* Contenedores Principales */
+header {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparente */
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: rgba(18, 18, 18, 0.8);
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Filmografía */
+#filmografia ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+#filmografia li {
+    background-color: var(--color-fondo-principal);
+    padding: 10px;
+    border-left: 4px solid var(--color-acento);
+    transition: transform 0.3s ease;
+}
+
+#filmografia li:hover {
+    transform: translateX(5px);
+}
+
+/* Botón (Interacción JS) */
+#colorChangeBtn {
+    background-color: var(--color-acento);
+    color: var(--color-fondo-principal);
+    border: none;
+    padding: 12px 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#colorChangeBtn:hover {
+    background-color: #ffd700;
+    /* Oro más brillante */
+}
+
+#colorChangeBtn:active {
+    transform: translateY(1px);
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 1px solid rgba(179, 142, 0, 0.3);
+    color: rgba(240, 240, 240, 0.7);
+    font-size: 0.9em;
+}
