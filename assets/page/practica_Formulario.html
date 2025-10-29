@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--link (css, iconos, fuentes) -->
     <link rel="icon" href="../img/mgs3.png" type="image/png" sizes="32x32">
+
     <!--meta (SEO)-->
     <meta name="author" content="Salvador">
     <meta name="keywords" content="HTML">
@@ -44,6 +45,26 @@
         <a href="practica_MenuHorizontal.html">Practica de etiqueta de Menu Horizontal</a> |
         <a href="practica_Crazy.html">Practica de Crazy</a>
     </nav>
+    <hr>
+    <fieldset>
+        <legend>Registro de usuario</legend>
+        <br>
+        <label for="nombre">Nombres: </label>
+        <input type="text" name="nombre" id="nombre" placeholder="Ingrese su nombre completo" required>
+        <br> <br>
+        <label for="correo">Correo electronico: </label>
+        <input type="email" name="correo" id="correo" placeholder="ejemplo@correo.com" required>
+        <br> <br>
+        <label for="pais">Pais: </label>
+        <select name="pais" id="pais" required>
+            <!-- #region -->
+            <option value="ec">Ecuador</option>
+            <option value="us">Estados Unidos</option>
+        </select>
+        <br><br>
+        <input type="button" value="Enviar" id="IdControl">
+
+    </fieldset>
 
 
     <hr>
@@ -56,5 +77,6 @@
     </footer>
     <hr>
 </body>
+<script src="../js/JsFormulario.js"></script>
 
 </html>
