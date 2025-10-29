@@ -23,7 +23,3 @@ window.addEventListener("DOMContentLoaded", function () {
         emailInput.style.backgroundColor = "blue";
     })
 })
-
-
-
-
