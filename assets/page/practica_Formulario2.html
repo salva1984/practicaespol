@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--link (css, iconos, fuentes) -->
     <link rel="icon" href="../img/mgs3alt.png" type="image/png" sizes="32x32">
+    <link rel="stylesheet" href="../css/formulario.css">
     <!--meta (SEO)-->
     <meta name="author" content="Salvador">
     <meta name="keywords" content="HTML">
@@ -44,6 +45,56 @@
         <a href="practica_MenuHorizontal.html">Practica de etiqueta de Menu Horizontal</a> |
         <a href="practica_Crazy.html">Practica de Crazy</a>
     </nav>
+
+
+    <main>
+        <fieldset>
+            <!-- El formulario debe retornar los valores de cada eleemento en submit, llamando a la funcion -->
+            <form id="fmrDatos" name="fmrDatos" onsubmit="return FncDatosUser()">
+                <legend>Datos del Usuario</legend>
+                <label for="txtApellido">Nombre</label>
+                <input type="text" id="txtNombre" name="txtNombre" placeholder="Ingrese su nombre" required>
+                <br>
+                <label for="txtApellido">Apellido:</label>
+                <input type="text" name="txtApellido" id="txtApellido" placeholder="Ingrese se Apellido" required>
+                <br>
+                <label for="email">Ingrese su correo:</label>
+                <input type="email" name="email" id="email" placeholder="example@example.com" required>
+                <!-- SA -->
+                <br>
+                <label for="sltPais"></label>
+                <select name="sltPais" id="sltPais" required>
+                    <option value="-">-- Seleccione un pais --</option>
+                    <option value="ec">Ecuador</option>
+                    <option value="us">Estados Unidos</option>
+                    <option value="ca">Canadá</option>
+                    <option value="mx">Mexico</option>
+                </select>
+                <!-- textarea -->
+                <br> <br>
+                <label for="txtareaComentarios">Comentarios</label><br>
+                <textarea name="txtareaComentarios" id="txtareaComentarios" placeholder="Comentarios aqui"
+                    required></textarea>
+                <!-- Genero -->
+                <br>
+                <fieldset>
+                    <legend>Genero</legend>
+                    <label for="radioGeneroM">Masculino</label>
+                    <input type="radio" name="genero" id="radioGeneroM" value="M">
+                    <label for="radioGeneroF">Femenino</label>
+                    <input type="radio" name="genero" id="radioGeneroF" value="F">
+                </fieldset>
+                <!-- Checkbox -->
+                <br> <br>
+                <label for="checkTerms">Aceptar terminos y condiciones: </label>
+
+                <input type="checkbox" name="checkTerms" id="checkTerms">
+                <br><br>
+                <button type="submit" id="btnEnviar" name="btnEnviar">Enviar</button>
+            </form>
+        </fieldset>
+    </main>
+
 
 
     <hr>
